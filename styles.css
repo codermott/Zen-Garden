@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Atomic+Age&family=Neuton&display=swap");
+
+:root {
+  /* Colors */
+  --color-primary: #4e5988;
+  --color-secondary: #FF8C42;
+  --color-tertiary: #f9c7e4;
+  --color-accent: #333;
+  /* Font Family */
+  --font-family-primary: Atomic Age, cursive;
+  --font-family-secondary: Neuton, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: var(--color-accent);
+  background-image: url("https://th.bing.com/th/id/OIP.QmfVWucnGgFFTgNaBKFfIwHaIr?rs=1&pid=ImgDetMain");
+  background-repeat: none;
+  background-size: cover;
+}
+
+body {
+  animation: fadeIn 1s ease-in-out;
+}
+main {
+  background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+  max-width: 1200px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+header,
+section,
+footer {
+  padding: 20px;
+  background-color: transparent; /* Set the background color to transparent */
+  border: none; /* Remove border */
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1200px;
+}
+
+header {
+  height: 500px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-family-primary);
+  margin: auto ;
+  text-transform: uppercase;
+}
+
+.title {
+  background-color: var(--color-primary);
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin: auto;
+}
+
+header, footer {
+  background-color: var(--color-primary);
+}
+
+p {
+  font-family: var(--font-family-secondary);
+}
+
+.header-sect {
+  background-image: url("https://th.bing.com/th/id/OIP.QmfVWucnGgFFTgNaBKFfIwHaIr?rs=1&pid=ImgDetMain");
+  background-size: cover;
+  background-position: top-center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  border-radius: 50% 50% 50% 50%;
+}
+
+.logo-container {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  display: block;
+}
+
+footer {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#section2 {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  padding: 10px;
+}
+
+#left-column, #right-column {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  border: none; /* Remove border */
+  padding: 10px;
+}
+
+#section3 .item-box,
+#section3 .text-box,
+#section5 .item-box,
+#section5 .text-box {
+  border: none; /* Remove border */
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#section4 .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0; /* Set gap to 0 to remove the column gap */
+  width: 100%;
+}
+
+#section4 .grid-container > div {
+  border: none; /* Remove border */
+  text-align: center;
+}
+
+#section4 .grid-container > div.grid-item:nth-child(1) img {
+  border-radius: 100% 0% 0% 100% / 50%;
+}
+
+#section4 .grid-container > div.grid-item:nth-child(4) img {
+  border-radius: 0% 100% 100% 0% / 50%;
+}
+
+#section4 .grid-container > div img {
+  width: 100%;
+  height: 100%;
+  /* Set the width and height to 100% to fill the container */
+  object-fit: cover;
+}
+
+#section4 .grid-item:nth-child(2) {
+  background-color: var(--color-secondary); /* Add this line for the background color of Item 1 */
+  color: white;
+}
+
+#section4 .grid-item:nth-child(3) {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+#section4 .grid-container > div.grid-item:nth-child(3) img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-mask-image: radial-gradient(circle at 100% 50%, transparent 50%, black 50%);
+  mask-image: radial-gradient(circle at 100% 50%, transparent 50%, black 50%);
+}
+
+#section5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; /* Adjust to control vertical alignment */
+  text-align: center;
+  height: 100%; /* Make the section fill the height */
+  margin: auto;
+}
+
+#section5 .text-box {
+  background-color: var(--color-tertiary);
+  flex-grow: 1; /* Make the text-box fill the available space vertically */
+  width: 100%;
+  padding: 20px;
+  text-align: justify;
+}
+
+#section5 h2 {
+  margin-bottom: 20px;
+}
+
+#section3 .text-box {
+  background-color: var(--color-tertiary);
+}
+
+#section3 {
+  display: flex;
+  flex-direction: column; /* Assuming you want a horizontal layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+}
+
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInLeft 0.5s forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.bottomhalf {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+}
+
+.bottomhalf .title h2 {
+  margin-bottom: 20px;
+}
+
+.bottomhalf .text-box {
+  background-color: var(--color-tertiary);
+  border-radius: 50%; /* Create a vertical oval shape */
+  padding: 20px;
+  overflow: hidden; /* Clip content outside the border-radius */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottomhalf .text-box p {
+  margin: 0;
+  padding: 20px;
+  text-align: justify;
+  
+  shape-outside: circle(50%); /* Use shape-outside to shape the text around the oval */
+  clip-path: ellipse(100% 50% at 50% 50%); /* Use clip-path for better browser support */
+}
+.tophalf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*# sourceMappingURL=styles.css.map */
