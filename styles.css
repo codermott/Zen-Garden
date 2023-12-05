@@ -1,14 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Atomic+Age&family=Neuton&display=swap");
-
+/* Add this to your existing CSS or create a new CSS file */
 :root {
-  /* Colors */
   --color-primary: #4e5988;
   --color-secondary: #FF8C42;
   --color-tertiary: #f9c7e4;
   --color-accent: #333;
-  /* Font Family */
-  --font-family-primary: Atomic Age, cursive;
-  --font-family-secondary: Neuton, sans-serif;
+  --font-family-primary: 'Atomic Age', cursive;
+  --font-family-secondary: 'Neuton', sans-serif;
 }
 
 body {
@@ -24,13 +21,11 @@ body {
   background-image: url("https://th.bing.com/th/id/OIP.QmfVWucnGgFFTgNaBKFfIwHaIr?rs=1&pid=ImgDetMain");
   background-repeat: none;
   background-size: cover;
-}
-
-body {
   animation: fadeIn 1s ease-in-out;
 }
+
 main {
-  background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+  background-color: rgba(255, 255, 255, 0.8);
   max-width: 1200px;
 }
 
@@ -47,8 +42,8 @@ header,
 section,
 footer {
   padding: 20px;
-  background-color: transparent; /* Set the background color to transparent */
-  border: none; /* Remove border */
+  background-color: transparent;
+  border: none;
   width: 100%;
   box-sizing: border-box;
   max-width: 1200px;
@@ -56,12 +51,7 @@ footer {
 
 header {
   height: 500px;
-}
-
-h1, h2, h3, h4 {
-  font-family: var(--font-family-primary);
-  margin: auto ;
-  text-transform: uppercase;
+  position: relative;
 }
 
 .title {
@@ -76,8 +66,10 @@ header, footer {
   background-color: var(--color-primary);
 }
 
-p {
-  font-family: var(--font-family-secondary);
+h1, h2, h3, h4 {
+  font-family: var(--font-family-primary);
+  margin: auto;
+  text-transform: uppercase;
 }
 
 .header-sect {
@@ -133,7 +125,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 50%;
-  border: none; /* Remove border */
+  border: none;
   padding: 10px;
 }
 
@@ -141,7 +133,7 @@ main {
 #section3 .text-box,
 #section5 .item-box,
 #section5 .text-box {
-  border: none; /* Remove border */
+  border: none;
   padding: 10px;
   margin-bottom: 10px;
   width: 100%;
@@ -151,12 +143,12 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 0; /* Set gap to 0 to remove the column gap */
+  gap: 0;
   width: 100%;
 }
 
 #section4 .grid-container > div {
-  border: none; /* Remove border */
+  border: none;
   text-align: center;
 }
 
@@ -171,12 +163,10 @@ main {
 #section4 .grid-container > div img {
   width: 100%;
   height: 100%;
-  /* Set the width and height to 100% to fill the container */
-  object-fit: cover;
 }
 
 #section4 .grid-item:nth-child(2) {
-  background-color: var(--color-secondary); /* Add this line for the background color of Item 1 */
+  background-color: var(--color-secondary);
   color: white;
 }
 
@@ -197,15 +187,15 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around; /* Adjust to control vertical alignment */
+  justify-content: space-around;
   text-align: center;
-  height: 100%; /* Make the section fill the height */
+  height: 100%;
   margin: auto;
 }
 
 #section5 .text-box {
   background-color: var(--color-tertiary);
-  flex-grow: 1; /* Make the text-box fill the available space vertically */
+  flex-grow: 1;
   width: 100%;
   padding: 20px;
   text-align: justify;
@@ -221,11 +211,10 @@ main {
 
 #section3 {
   display: flex;
-  flex-direction: column; /* Assuming you want a horizontal layout */
-  align-items: center; /* Center items vertically */
-  justify-content: center; /* Center items horizontally */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
 
 .slide-in {
   opacity: 0;
@@ -262,6 +251,7 @@ main {
     transform: translateX(0);
   }
 }
+
 .bottomhalf {
   display: flex;
   flex-direction: column;
@@ -275,9 +265,9 @@ main {
 
 .bottomhalf .text-box {
   background-color: var(--color-tertiary);
-  border-radius: 50%; /* Create a vertical oval shape */
+  border-radius: 50%;
   padding: 20px;
-  overflow: hidden; /* Clip content outside the border-radius */
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -287,14 +277,55 @@ main {
   margin: 0;
   padding: 20px;
   text-align: justify;
-  
-  shape-outside: circle(50%); /* Use shape-outside to shape the text around the oval */
-  clip-path: ellipse(100% 50% at 50% 50%); /* Use clip-path for better browser support */
+  shape-outside: circle(50%);
+  clip-path: ellipse(100% 50% at 50% 50%);
 }
+
 .tophalf {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/*# sourceMappingURL=styles.css.map */
+.menu-btn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 20px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  transition: right 0.5s ease;
+}
+
+.menu-btn {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
+
+.btn-line {
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
