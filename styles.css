@@ -182,6 +182,7 @@ main {
   mask-image: radial-gradient(circle at 100% 50%, transparent 50%, black 50%);
 }
 
+
 #section5 {
   display: flex;
   flex-direction: column;
@@ -215,7 +216,7 @@ main {
 .slide-in {
   opacity: 0;
   transform: translateX(100%);
-  animation: slideIn 0.5s forwards;
+  animation: slideIn 2s forwards;
 }
 
 @keyframes slideIn {
@@ -233,7 +234,7 @@ main {
 .slide-in-left {
   opacity: 0;
   transform: translateX(-100%);
-  animation: slideInLeft 0.5s forwards;
+  animation: slideInLeft 2s forwards;
 }
 
 @keyframes slideInLeft {
