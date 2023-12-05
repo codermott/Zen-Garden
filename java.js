@@ -6,7 +6,8 @@ function toggleSidebar() {
 
     // If the sidebar is hidden, slide it in from the right; otherwise, slide it out to the right
     sidebar.style.right = isHidden ? '0' : '-250px';
-    
+
     document.querySelector('.menu-btn').addEventListener('click', toggleSidebar);
+    document.getElementById('design-selection').classList.toggle('active');
 
 }
